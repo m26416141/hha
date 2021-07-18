@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+.banner-img {
+  background-color: white;
+}
+
+.login-form {
+  border-left: 1px solid #d2d2d2;
+  padding: 0px;
+  padding-left: 70px;
+}
+.login-form form {
+  position: relative;
+  top: 7%;
+  bottom: 20%;
+  margin-top: 20px;
+  width: 400px;
+}
+.login-form form img {
+  margin-bottom: 40px;
+}
+.login-form .login-copyright {
+  font-size: 13px;
+  position: absolute;
+  bottom: 5%;
+}
+
+label {
+  font-family: "Noto Sans";
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+}
+
+.form-input {
+  padding: 20px 20px 20px;
+  font-family: sans-serif;
+  border: 1px solid #d4d4d4;
+  border-bottom: 3px solid #d4d4d4;
+  border-radius: 0px;
+  outline: none;
+  margin-bottom: 10px;
+  transition: 0.1s;
+}
+
+.form-input:focus {
+  border: 1px solid #793775;
+  border-bottom: 3px solid #793775;
+  border-radius: 0px;
+}
+
+.button-submit {
+  width: 100%;
+}
+
+.error-mssg {
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid #ff4d4d;
+  padding: 10px 20px;
+  color: #ff4d4d;
+}
+
+/*# sourceMappingURL=login-signup.css.map */

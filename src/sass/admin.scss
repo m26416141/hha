@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+
+body {
+	font-family: "Noto Sans", sans-serif;
+}
+
+.sidebar {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	border-right: 1px solid #dddddd;
+	height: 100%;
+	width: 20% !important;
+	padding: 20px;
+	overflow-x: hidden;
+}
+
+.hh-copyright {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px;
+}
+
+.sidebar {
+	ul {
+		li {
+			background-color: #f2f2f2;
+			border: 0px;
+			padding: 10px 10px;
+			margin-top: 10px;
+			border-radius: 0px !important;
+			transition: 0.3s;
+			a {
+				display: flex;
+				align-items: center;
+				color: black;
+				text-decoration: none;
+				span {
+					font-family: "Noto Sans", sans-serif;
+					margin-left: 20px;
+				}
+			}
+		}
+		li:hover {
+			background-color: #e7e7e7;
+		}
+	}
+}
+
+.logo-border {
+	// margin-top: 20px;
+	border-top: 1px solid black;
+}
+
+.logo-name {
+	margin: 0px;
+}
+
+.menu-logo {
+	float: right;
+}
+
+.active {
+	// background: #793775 !important;
+	background-image: linear-gradient(145deg, #380139 90%, #b17abd);
+	border-radius: 0px !important;
+	a {
+		color: white !important;
+	}
+}
+
+.content {
+	padding: 70px;
+	margin-left: 20%;
+}
+
+.messages-card {
+	// background: #dddddd;
+	// display: flex !important;
+	align-items: center;
+}
+
+#card-details {
+	cursor: pointer;
+}
+
+.fab-add {
+	cursor: pointer;
+	position: fixed;
+	bottom: 40px;
+	right: 70px;
+	height: 50px;
+	width: 50px;
+	background: white;
+	border: 2px solid black;
+	border-radius: 50%;
+	padding: 3px;
+	justify-content: center;
+	transition: 0.2s;
+
+	i {
+		transition: 0.3s;
+	}
+}
+.fab-add.fab2-active {
+	border-radius: 50%;
+
+	i {
+		transform: rotate(45deg);
+	}
+}
+
+.row-form-add {
+	position: fixed;
+	bottom: 40px;
+	right: 6%;
+	top: 140px;
+	transform: translate(0%, -13%);
+	background: white;
+	// border: 1px solid black;
+	padding: 40px;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0px 0px 10px 5px #7070704d;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.2s;
+
+	label {
+		font-family: "Noto Sans";
+		font-weight: 700;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+
+	.form-input {
+		padding: 20px 20px 20px;
+		font-family: sans-serif;
+		border: 1px solid #d4d4d4;
+		border-bottom: 3px solid #d4d4d4;
+		border-radius: 0px;
+		box-sizing: border-box;
+		outline: none;
+		margin-bottom: 10px;
+		transition: 0.1s;
+	}
+
+	.form-input:focus {
+		border: 1px solid #793775;
+		border-bottom: 3px solid #793775;
+		border-radius: 0px;
+	}
+
+	.form-place {
+		border: 1px solid black;
+		border-radius: 0px;
+		box-sizing: border-box;
+		outline: none;
+		margin-bottom: 10px;
+		width: 100%;
+		padding: 10px;
+	}
+
+	.form-place:focus {
+		border: 1px solid #793775;
+		border-radius: 0px;
+	}
+
+	.form-text-area {
+		border: 1px solid black;
+		border-radius: 0px;
+		box-sizing: border-box;
+		outline: none !important;
+		margin-bottom: 10px;
+	}
+
+	.form-text-area:focus {
+		border: 1px solid #793775 !important;
+		border-radius: 0px;
+	}
+
+	.form-control {
+		color: black !important;
+		padding: 10px;
+	}
+
+	.form-control:focus {
+		box-shadow: none;
+	}
+
+	.button-submit {
+		margin-top: 30px;
+		background-image: linear-gradient(145deg, #380139 90%, #b17abd);
+		background-size: 200%;
+		background-position: right;
+		transition: 0.3s background-position ease-in-out;
+		font-family: sans-serif;
+		font-weight: 700;
+		font-size: 20px;
+		padding: 13px 40px;
+		border: none;
+		box-shadow: none;
+		color: white;
+		border-radius: 0px;
+	}
+
+	.button-submit:hover {
+		background-image: linear-gradient(145deg, #380139 90%, #b17abd);
+		background-size: 200%;
+		background-position: left;
+		// box-shadow: 0px 0px 10px 5px #7070704d;
+	}
+}
+
+.row-form-add.fab-active {
+	opacity: 100;
+	visibility: visible;
+	overflow: scroll;
+	// i {
+	// 	transform: rotate(45deg);
+	// }
+}
+
+.card-careers {
+	border-radius: 0px;
+	height: 100%;
+	border: 1px solid #dddddd;
+	transition: 0.5s;
+	.card-body-careers {
+		padding: 20px;
+	}
+	.card-media-careers {
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 0s, opacity 0.5s linear;
+	}
+	.card-desc {
+		transition: 0.5s;
+	}
+	.card-title-careers {
+		font-family: "Noto Sans";
+		margin-top: 20px;
+	}
+}
+
+.about-us-link {
+	text-decoration: none;
+	font-family: "Noto Sans";
+	font-weight: 700;
+	text-decoration: none;
+	color: #793775;
+	transition: 0.3s;
+	padding-bottom: 2px;
+	border-bottom: 2px solid transparent;
+}
+
+.about-us-link:hover {
+	text-decoration: none;
+	font-family: "Noto Sans";
+	text-decoration: none;
+	color: #793775;
+	padding-bottom: 4px;
+	border-bottom: 2px solid #793775;
+}
+// // .card-desc {
+// // 	text-overflow: ellipsis;
+// // 	overflow: hidden;
+// // 	white-space: nowrap;
+// // }
+.card-careers:hover {
+	background-color: white;
+	border: 1px transparent #dddddd;
+	box-shadow: 0px 0px 10px 5px #7070704d;
+	width: 400px;
+	.card-media-careers {
+		visibility: hidden;
+		opacity: 0;
+		height: 0;
+	}
+	.card-desc {
+		white-space: normal;
+	}
+	.card-title-careers {
+		margin-top: 20px;
+	}
+}
+
+.tooltip-delete {
+	// background: lightblue;
+	border: 1px solid black;
+	border-radius: 50%;
+	display: inline-flex;
+	vertical-align: middle;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+}
+
+//modal card @ admin-messages
+.modal-header {
+	background-color: white !important;
+	padding: 30px;
+	border-bottom: none;
+	.modal-title {
+		color: black !important;
+	}
+	.close {
+		padding: 0px;
+		margin: 0px;
+	}
+}
+
+// .modal-backdrop {
+// 	background-color: rgb(0, 0, 0);
+// 	// opacity: 20 !important;
+// }
+
+// $modal-backdrop-bg: red;
+
+// .modal-content {
+// 	box-shadow: 0px 7px 100px 20px #88888870;
+// }
+
+.modal-body {
+	padding: 0px 30px;
+	margin-bottom: 20px;
+}
+
+.modal-footer {
+	border-top: none;
+	justify-content: flex-end;
+	border-bottom: 10px solid #793775;
+	padding: 30px;
+}
+
+.modal-footer > :not(:first-child) {
+	margin: 0px;
+}
+
+.btn-cancel {
+	border: 2px solid #d4d4d4;
+	background-color: transparent;
+	padding: 13px 20px;
+	margin: 0px;
+	margin-right: 20px !important;
+	border-radius: 0px;
+	cursor: pointer;
+}
+
+.btn-submit {
+	background-image: linear-gradient(145deg, #380139 90%, #b17abd);
+	padding: 13px 20px;
+	border: 2px solid black;
+	color: white;
+	margin: 0px;
+	border-radius: 0px;
+	cursor: pointer;
+}
+
+.btn-details {
+	text-decoration: none;
+	font-family: "Noto Sans";
+	font-weight: 700;
+	text-decoration: none;
+	color: #793775;
+	transition: 0.3s;
+	padding-bottom: 2px;
+	border-bottom: 2px solid transparent;
+	background-color: white;
+	border: 0px;
+	cursor: pointer;
+}
+
+//modal card @ admin
+.modal-details-content {
+	width: 500px;
+	box-shadow: 0px 7px 100px 20px #88888870;
+}
+
+.card-header:first-child {
+	border-radius: 0px;
+	margin-top: 0px;
+	cursor: pointer;
+}
+
+.card-careers-header {
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 0px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.col-header {
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.card-careers-title {
+	margin-bottom: 0px;
+	background-color: white;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.card-careers-content {
+	background-color: white;
+	border: 1px solid #d4d4d4;
+	border-radius: 0px;
+	cursor: pointer;
+}
+
+.btn {
+	.btn-careers-delete {
+		margin-left: 20px;
+	}
+}
