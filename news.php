@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>News - Howard Hermes</title>
+    <title>Article - Howard Hermes</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="stylesheet" href="public/css/news.css?<?php echo time(); ?>" />
@@ -33,10 +33,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="news.php">News</a>
+                    <a class="nav-link" href="services.php">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="services.php">Services</a>
+                    <a class="nav-link active" href="news.php">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="careers.php">Careers</a>
@@ -49,7 +49,11 @@
     </nav>
     <div class="container-fluid">
         <div id="news-row" class="row">
-            <div id="news-info" class="col-sm-12">
+            <div id="news-info-title" class="col-sm-12">
+                <h4>Latest Updates</h4>
+            </div>
+            <div id="news-info-item" class="col-sm-3">
+
             </div>
         </div>
     </div>
