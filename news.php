@@ -48,14 +48,31 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div id="news-row" class="row">
+        <div class="row">
             <div id="news-info-title" class="col-sm-12">
                 <h4>Latest Updates</h4>
             </div>
-            <div id="news-info-item" class="col-sm-3">
-
-            </div>
         </div>
+        <div id="news-row" class="row">
+                <div id="news-info-item" class="col-sm">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-media">
+                                <a>
+                                    <img src="assets/img/M-10.png" alt="" style="
+                                        height: 100px;
+                                        display: block;
+                                        margin-left: auto;
+                                        margin-right: auto;">
+                                </a>
+                            </div>
+                            <h4 class="card-title services-card-title" style=" font-weight: 700">OPIS</h4>
+                            <p style="font-weight: 300;">Organizational Performance Improvement System.</p>
+                            <a class="about-us-link" style="text-decoration: none;" href="" data-target=" #modalOpis" data-toggle="modal">Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
 </body>
 
