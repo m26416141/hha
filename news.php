@@ -35,8 +35,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="services.php">Services</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="news.php">News</a>
+                <li class="nav-item dropdown">
+                    <!-- <a class="nav-link active" href="news.php">News</a> -->
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        News
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="news.php">Article</a>
+                        <a class="dropdown-item" href="#">Agenda</a>
+                        <!-- <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a> -->
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="careers.php">Careers</a>
@@ -54,25 +63,25 @@
             </div>
         </div>
         <div id="news-row" class="row">
-                <div id="news-info-item" class="col-sm">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-media">
-                                <a>
-                                    <img src="assets/img/M-10.png" alt="" style="
+            <div id="news-info-item" class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-media">
+                            <a>
+                                <img src="assets/img/M-10.png" alt="" style="
                                         height: 100px;
                                         display: block;
                                         margin-left: auto;
                                         margin-right: auto;">
-                                </a>
-                            </div>
-                            <h4 class="card-title services-card-title" style=" font-weight: 700">OPIS</h4>
-                            <p style="font-weight: 300;">Organizational Performance Improvement System.</p>
-                            <a class="about-us-link" style="text-decoration: none;" href="" data-target=" #modalOpis" data-toggle="modal">Details &rarr;</a>
+                            </a>
                         </div>
+                        <h4 class="card-title services-card-title" style=" font-weight: 700">OPIS</h4>
+                        <p style="font-weight: 300;">Organizational Performance Improvement System.</p>
+                        <a class="about-us-link" style="text-decoration: none;" href="" data-target=" #modalOpis" data-toggle="modal">Details &rarr;</a>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 </body>
 
