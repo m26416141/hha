@@ -27,7 +27,7 @@ function unameExist($con, $uname)
     $stmt = $con->prepare("SELECT * FROM users WHERE users_uid = ?");
     $stmt->bind_param("s", $uname);
     $stmt->execute();
-    $stmt->bind_result();
+    // $stmt->bind_result($uname);
     $result_stmt = $stmt->get_result();
     if ($row = mysqli_fetch_assoc($result_stmt)) {
         return $row;

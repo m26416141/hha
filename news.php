@@ -63,20 +63,16 @@
             </div>
         </div>
         <div id="news-row" class="row">
-            <div id="news-info-item" class="col-sm">
+            <div id="news-info-item" class="col-sm-4">
                 <div class="card">
                     <div class="card-body">
                         <div class="card-media">
                             <a>
-                                <img src="assets/img/M-10.png" alt="" style="
-                                        height: 100px;
-                                        display: block;
-                                        margin-left: auto;
-                                        margin-right: auto;">
+                                <img src="assets/img/M-10.png" alt="" style="height: 100px; display: block; margin-left: auto; margin-right: auto;">
                             </a>
                         </div>
-                        <h4 class="card-title services-card-title" style=" font-weight: 700">OPIS</h4>
-                        <p style="font-weight: 300;">Organizational Performance Improvement System.</p>
+                        <h4 id="news-card-title" class="card-title news-card-title" style=" font-weight: 700">OPIS</h4>
+                        <p id="news-card-content" style="font-weight: 300;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed quam convallis, lacinia eros sit amet, dapibus lectus. Quisque ac ipsum ac eros ullamcorper mattis ac ut tortor. Maecenas sit amet tempus turpis, sit amet porta tellus. Duis sit amet rutrum justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Aliquam et condimentum ipsum. Phasellus lacinia tempor laoreet. Sed molestie sagittis consectetur. Aenean tempor risus et mauris consectetur, a sodales ante pulvinar. Vivamus mattis lorem sed mi sollicitudin, non ultrices neque maximus. Curabitur in pharetra orci. In sodales cursus magna ac venenatis.</p>
                         <a class="about-us-link" style="text-decoration: none;" href="" data-target=" #modalOpis" data-toggle="modal">Details &rarr;</a>
                     </div>
                 </div>

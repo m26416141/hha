@@ -132,6 +132,7 @@ body {
   padding: 10px;
   margin-left: 20px;
   background-position: left;
+  background-color: #380139;
 }
 
 .col-link {
@@ -150,6 +151,12 @@ body {
 
 #news-info-title {
   margin: 40px;
+}
+
+.news-card-title {
+  font-size: 20px;
+  font-family: "Noto Sans";
+  font-weight: 700;
 }
 
 @media only screen and (min-width: 1040px) {
@@ -200,12 +207,6 @@ body {
 
   .card-body {
     padding: 15px;
-  }
-
-  .services-card-title {
-    font-size: 20px;
-    font-family: "Noto Sans";
-    font-weight: 700;
   }
 }
 .about-us-link {
