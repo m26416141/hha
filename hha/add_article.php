@@ -17,7 +17,7 @@ if (!isset($_SESSION['uid'])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../public/css/login-signup.css" />
+    <link rel="stylesheet" href="../public/css/login-signup.css?<?php echo time(); ?>" />
 </head>
 
 <body>

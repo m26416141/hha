@@ -15,15 +15,25 @@ if (isset($_POST["submit"])) {
 
     $allowedFile = array('jpg', 'jpeg', 'png');
 
+    //other input
+    $arTitle = $_POST["title"];
+    $arDate = $_POST["date"];
+    $arDescription = $_POST["desc"];
+
+    $sql = "INSERT into article (article_title, article_date, article_content) VALUES ('$arTitle', '$arDate', '$arDescription')";
+
     if (in_array($fileExt, $allowedFile)) {
         if ($fileError === 0) {
             if ($fileSize < 50000) {
                 $fileNameNew = uniqid('', true) . "." . $fileExt;
-                $fileDestination = "uploads/" . $fileNameNew;
                 if (move_uploaded_file($fileTmp, '../assets/uploads/' . $fileNameNew) === true) {
-                    header("Location: add_article.php?uploadsuccess");
+                    if ($con->query($sql) === true) {
+                        header("Location: add_article.php?uploadarticlesuccess");
+                    } else {
+                        header("Location: add_article.php?uploadarticlefailed");
+                    }
                 } else {
-                    header("Location: add_article.php?uploadfailed");
+                    header("Location: add_article.php?uploadimagefailed");
                 }
             } else {
                 echo "File is too big";

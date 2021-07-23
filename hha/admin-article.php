@@ -5,7 +5,7 @@
         window.open('add_article.php', 'Stackoverflow');
     }
 </script>
-<link rel="stylesheet" href="../public/css/admin.css" />
+<link rel="stylesheet" href="../public/css/admin.css?<?php echo time(); ?>" />
 <div class="container-fluid">
     <div class="row" style="margin-bottom: 20px;">
         <div class="col-sm-6" style="padding: 0px;">
@@ -19,5 +19,15 @@
             </div>
         </div>
         <div class="col-sm-12 logo-border" style="padding: 0px; margin-top: 40px"></div>
+    </div>
+    <div class="row" id="article-data">
+        <div class="col-sm-12" style="padding: 0px;">
+            <script>
+                $("#article-data").load("load_article.php");
+                // setInterval(function() {
+                //     $("#messages-data").load("load_messages.php");
+                // }, 1000);
+            </script>
+        </div>
     </div>
 </div>
