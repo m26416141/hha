@@ -70,3 +70,37 @@ input {
 	color: rgb(255, 77, 77);
 	// font-size: 13px;
 }
+
+textarea {
+	width: 100%;
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+.form-text-area {
+	border: 1px solid #d4d4d4;
+	border-bottom: 3px solid #d4d4d4;
+	border-radius: 0px;
+	box-sizing: border-box;
+	outline: none;
+	margin-bottom: 10px;
+	transition: 0.1s;
+}
+
+.form-text-area:focus {
+	border: 1px solid #793775;
+	border-bottom: 3px solid #793775;
+	border-radius: 0px;
+}
+
+.logo-border {
+	// margin-top: 20px;
+	border-top: 1px solid black;
+	margin: 0px 30px 40px;
+}
+
+#btn-add-article {
+	margin-top: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
+}

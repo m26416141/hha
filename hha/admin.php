@@ -51,6 +51,13 @@ if (!isset($_SESSION['uid'])) {
                             <span class="links-name">Careers</span>
                         </a>
                     </li>
+                    <li class="list-group-item" id="article">
+                        <a id="text-article" href="#" data-target="admin-article" onclick="loadArticle()">
+                            <!-- <box-icon type='solid' name='group'></box-icon> -->
+                            <i class='bx bxs-news'></i>
+                            <span class="links-name">Article</span>
+                        </a>
+                    </li>
                     <?php
                     if (isset($_SESSION["uid"])) {
                         echo '
@@ -119,6 +126,8 @@ if (!isset($_SESSION['uid'])) {
             document.getElementById("text-messages").style.color = "white";
             document.getElementById("careers").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
             document.getElementById("text-careers").style.color = "black";
+            document.getElementById("article").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
+            document.getElementById("text-article").style.color = "black";
         }
 
         function loadCareers() {
@@ -126,6 +135,17 @@ if (!isset($_SESSION['uid'])) {
             document.getElementById("text-careers").style.color = "white";
             document.getElementById("messages").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
             document.getElementById("text-messages").style.color = "black";
+            document.getElementById("article").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
+            document.getElementById("text-article").style.color = "black";
+        }
+
+        function loadArticle() {
+            document.getElementById("article").style.backgroundImage = "linear-gradient(145deg, #380139 90%, #b17abd)";
+            document.getElementById("text-article").style.color = "white";
+            document.getElementById("messages").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
+            document.getElementById("text-messages").style.color = "black";
+            document.getElementById("careers").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
+            document.getElementById("text-careers").style.color = "black";
         }
     </script>
     <script>
