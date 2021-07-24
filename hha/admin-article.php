@@ -18,16 +18,14 @@
                 <button id="btn-modal-delete" type="button" class="btn btn-primary" style="margin-left: 10px;" onclick="addArticle()">Add Article</button>
             </div>
         </div>
-        <div class="col-sm-12 logo-border" style="padding: 0px; margin-top: 40px"></div>
+        <div class="col-sm-12 logo-border" style="padding: 0px; margin: 40px 0px 20px 0px"></div>
     </div>
-    <div class="row" id="article-data">
-        <div class="col-sm-12" style="padding: 0px;">
-            <script>
-                $("#article-data").load("load_article.php");
-                // setInterval(function() {
-                //     $("#messages-data").load("load_messages.php");
-                // }, 1000);
-            </script>
-        </div>
+    <div class="row row-cols-3" id="article-data">
+        <script>
+            $("#article-data").load("load_article.php");
+            // setInterval(function() {
+            //     $("#messages-data").load("load_messages.php");
+            // }, 1000);
+        </script>
     </div>
 </div>

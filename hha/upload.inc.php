@@ -20,13 +20,12 @@ if (isset($_POST["submit"])) {
     $arDate = $_POST["date"];
     $arDescription = $_POST["desc"];
 
-    $sql = "INSERT into article (article_title, article_date, article_content) VALUES ('$arTitle', '$arDate', '$arDescription')";
-
     if (in_array($fileExt, $allowedFile)) {
         if ($fileError === 0) {
             if ($fileSize < 50000) {
                 $fileNameNew = uniqid('', true) . "." . $fileExt;
                 if (move_uploaded_file($fileTmp, '../assets/uploads/' . $fileNameNew) === true) {
+                    $sql = "INSERT into article (article_title, article_date, article_content, article_img) VALUES ('$arTitle', '$arDate', '$arDescription', '$fileNameNew')";
                     if ($con->query($sql) === true) {
                         header("Location: add_article.php?uploadarticlesuccess");
                     } else {
