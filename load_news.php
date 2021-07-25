@@ -1,6 +1,6 @@
 <?php
 
-require_once 'dbh.inc.php';
+require_once 'hha/dbh.inc.php';
 $query = "SELECT * FROM article";
 $query_run = mysqli_query($con, $query);
 $check_article = mysqli_num_rows($query_run) > 0;
@@ -19,7 +19,7 @@ if ($check_article) {
                     <div class="card-body">
                         <div class="card-media">
                             <a>
-                                <img src="../assets/uploads/' . $row['article_img'] . '" alt="" style="height: 100px; display: block; margin-left: auto; margin-right: auto;">
+                                <img src="assets/uploads/' . $row['article_img'] . '" alt="" style="height: 100px; display: block; margin-left: auto; margin-right: auto;">
                             </a>
                         </div>
                         <h4 id="news-card-title" class="card-title news-card-title" style=" font-weight: 700">' . $title . '</h4>

@@ -22,7 +22,7 @@ if (isset($_POST["submit"])) {
 
     if (in_array($fileExt, $allowedFile)) {
         if ($fileError === 0) {
-            if ($fileSize < 50000) {
+            if ($fileSize < 500000) {
                 $fileNameNew = uniqid('', true) . "." . $fileExt;
                 if (move_uploaded_file($fileTmp, '../assets/uploads/' . $fileNameNew) === true) {
                     $sql = "INSERT into article (article_title, article_date, article_content, article_img) VALUES ('$arTitle', '$arDate', '$arDescription', '$fileNameNew')";
