@@ -415,6 +415,10 @@ body {
   display: inline-flex;
 }
 
+#news-row {
+  margin: 70px 130px;
+}
+
 @media only screen and (max-width: 425px) {
   .navbar .navbar-brand {
     margin: 0px 40px 0px 5px;

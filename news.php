@@ -70,6 +70,15 @@
                 //     $("#messages-data").load("load_messages.php");
                 // }, 1000);
             </script>
+            <script>
+                $('#news-row').on('click', '#button-news', function(e) {
+                    // alert($(this).data('id'));
+                    var articleId = $(this).data('id');
+                    var articleTitle = $(this).data('title');
+                    e.preventDefault();
+                    window.location.href = "news-details.php?newsid=" + articleId;
+                });
+            </script>
         </div>
     </div>
 </body>
