@@ -1,11 +1,9 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
     function addArticle() {
         window.open('add_article.php', 'Stackoverflow');
     }
 </script>
-<link rel="stylesheet" href="../public/css/admin.css?<?php echo time(); ?>" />
+
 <div class="container-fluid">
     <div class="row" style="margin-bottom: 20px;">
         <div class="col-sm-6" style="padding: 0px;">
@@ -26,6 +24,15 @@
             // setInterval(function() {
             //     $("#messages-data").load("load_messages.php");
             // }, 1000);
+        </script>
+        <script>
+            $('#article-data').on('click', '#button-news', function(e) {
+                // alert($(this).data('id'));
+                var articleId = $(this).data('id');
+                var articleTitle = $(this).data('title');
+                e.preventDefault();
+                window.location.href = "load_news_details.php?newsid=" + articleId;
+            });
         </script>
     </div>
 </div>

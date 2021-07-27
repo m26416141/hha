@@ -58,11 +58,12 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="row">
-            <div id="news-info-title" class="col-sm-12">
+        <h4 id="news-info-title" style="align-items: center; text-align: center">Latest Updates</h4>
+        <!-- <div class="row">
+            <div id="news-info-title" class="col-sm-12" st>
                 <h4>Latest Updates</h4>
             </div>
-        </div>
+        </div> -->
         <div id="news-row" class="row row-cols-3">
             <script>
                 $("#news-row").load("load_news.php");
