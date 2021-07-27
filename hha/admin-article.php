@@ -12,7 +12,6 @@
         <div class="col-sm-6" style="padding: 10px 0px;">
             <div style="float: right;">
                 <span class="tooltip-delete" data-toggle="tooltip" data-placement="left" data-html="true" title="Press <u>Delete All</u> to delete all messages">?</span>
-                <button id="btn-modal-delete" type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-delete-mssg" style="margin-left: 10px;">Delete All</button>
                 <button id="btn-modal-delete" type="button" class="btn btn-primary" style="margin-left: 10px;" onclick="addArticle()">Add Article</button>
             </div>
         </div>

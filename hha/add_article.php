@@ -44,7 +44,7 @@ if (!isset($_SESSION['uid'])) {
                             <label for="inputTitle">Title</label>
                             <input class="form-input" type="text" name="title" id="inputTitle" placeholder="Article title">
                             <label for="inputDate">Date published</label>
-                            <input class="form-input" type="date" name="date" id="inputDate" style="padding-bottom: 10px;">
+                            <input class="form-input" type="date" name="date" id="inputDate" style="padding-bottom: 20px;">
                             <label for="inputImage">Upload image</label>
                             <input class="form-input" type="file" name="file" id="inputImage" placeholder="Select image">
                         </div>
