@@ -97,8 +97,8 @@
                         </div>
                         <div class="modal-body" style="padding-top: 20px">
                             <!-- <iframe src="https://youtu.be/dh0pJdgY6Lc" width="100%" height="200" frameborder="0"></iframe> -->
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dh0pJdgY6Lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <p style="margin-top: 20px;">A professional certification designed for Business Owner, Business Leader, General Manager, and Organizational Development Practitioner and HR Leaders. CPOD will equip mentioned practitioners and professionals with practical knowledge expertly in developing Leadership (Change & Culture), Behavior (People & Process), as well as System (Strategy & Structure) to planned change and sharpen competitive advantages sustainably.</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dh0pJdgY6Lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px;"></iframe>
+                            <p>A professional certification designed for Business Owner, Business Leader, General Manager, and Organizational Development Practitioner and HR Leaders. CPOD will equip mentioned practitioners and professionals with practical knowledge expertly in developing Leadership (Change & Culture), Behavior (People & Process), as well as System (Strategy & Structure) to planned change and sharpen competitive advantages sustainably.</p>
                         </div>
                         <div class="row" style="padding: 0px 16px 16px">
                             <div class="col-sm-6" style="padding: 0px 5px 0px 16px;">
@@ -147,6 +147,7 @@
                             </div>
                         </div>
                         <div class="modal-body" style="padding-top: 20px">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dh0pJdgY6Lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px;"></iframe>
                             <p>A professional certification designed for Business Owners, Business Leaders, General Managers, and Organizational Development Practitioners. CPOA will equip mentioned practitioners and professionals with practical knowledge expertly in developing blueprint and an essential capability for Organizations in turbulent environment which facilitates the simultaneous pursuit of exploitation and exploration.</p>
                         </div>
                         <div class="row" style="padding: 0px 16px 16px">
@@ -196,6 +197,7 @@
                             </div>
                         </div>
                         <div class="modal-body" style="padding-top: 20px">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dh0pJdgY6Lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px;"></iframe>
                             <p>Reorganization can be a by product of organizational recovery. This may be a good time for the executive team to contemplate a new business model. A “resilient organization” is not one that is simply able to return to where it left off before the crisis. Rather, the truly resilient organization is one that has transformed, having built the attitudes, beliefs, agility, and structures into its DNA that enable it to not just recover to where it was, but catapult forward—quickly.</p>
                         </div>
                         <div class="row" style="padding: 0px 16px 16px">
@@ -255,6 +257,7 @@
                             </div>
                         </div>
                         <div class="modal-body" style="padding-top: 20px">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dh0pJdgY6Lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px;"></iframe>
                             <p>A tool to evaluate the current state of the company’s performance in optimizing company’s relationship with Customers, Employees and Shareholders to the balance. All for the sake of optimizing the health of the organization in the short and long term.</p>
                         </div>
                         <div class="row" style="padding: 0px 16px 16px">
@@ -304,6 +307,7 @@
                             </div>
                         </div>
                         <div class="modal-body" style="padding-top: 20px">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dh0pJdgY6Lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px;"></iframe>
                             <p>An assessment carried out to evaluate and measure the culture applied in the company. Culture in a company is a result of creation and thoughts from the leaders in the company. In short, the creator of culture is the leader. Through OCA, we will be able to measure the cultural gap between what is created by the leaders and what is perceived by by the employees. The result of implementing OCA is a mapping tool which can be used by the leaders to create the desired culture within the company.</p>
                         </div>
                         <div class="row" style="padding: 0px 16px 16px">
@@ -364,6 +368,7 @@
                             </div>
                         </div>
                         <div class="modal-body" style="padding-top: 20px">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dh0pJdgY6Lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px;"></iframe>
                             <p>A system created to improve the company’s overall performance as well as assist the leaders in evaluating, measuring and improving the performance of the company’s human resources starting from Organizational, Team, and Individual levels.</p>
                         </div>
                         <div class="row" style="padding: 0px 16px 16px">
@@ -414,6 +419,7 @@
                             </div>
                         </div>
                         <div class="modal-body" style="padding-top: 20px">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dh0pJdgY6Lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px;"></iframe>
                             <p>A system to process data into information as a basis for Leaders to make strategic decisions to develop innovations that are right and needed for the company.</p>
                         </div>
                         <div class="row" style="padding: 0px 16px 16px">
@@ -464,6 +470,7 @@
                             </div>
                         </div>
                         <div class="modal-body" style="padding-top: 20px">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dh0pJdgY6Lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px;"></iframe>
                             <p>A tool to balance mind and body of every human resource in the company.</p>
                         </div>
                         <div class="row" style="padding: 0px 16px 16px">
@@ -514,6 +521,7 @@
                             </div>
                         </div>
                         <div class="modal-body" style="padding-top: 20px">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dh0pJdgY6Lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px;"></iframe>
                             <p>A system to map the company’s sales force based on Mind Mapping approach. OSAM will help every salesperson in the company in real terms to carry out their functions in the market optimally, enthusiastically, competitively and achieve targets.</p>
                         </div>
                         <div class="row" style="padding: 0px 16px 16px">
@@ -564,6 +572,7 @@
                             </div>
                         </div>
                         <div class="modal-body" style="padding-top: 20px">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dh0pJdgY6Lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px;"></iframe>
                             <p>A system to help companies in parallel transform in exploitation and exploration in an agile and adaptive organization. Exploitation of systems that have been running with a high level of efficiency and exploration of systems that generate innovation for the company’s business model in a fast, scalable and excellent manner.</p>
                         </div>
                         <div class="row" style="padding: 0px 16px 16px">

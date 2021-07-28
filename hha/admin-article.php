@@ -1,6 +1,6 @@
 <script>
     function addArticle() {
-        window.open('add_article.php', 'Stackoverflow');
+        window.open('add_article.php', 'Add Article');
     }
 </script>
 

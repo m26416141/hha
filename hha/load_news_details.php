@@ -86,8 +86,7 @@
             echo '
             <div class="col-sm-4">
                 <div id="edit-delete-article-col" class="col-sm-12">
-                    <button class="btn btn-danger btn-block">Delete</button>
-                    <button id="button-edit" data-id="' . $getArticleId . '" class="btn btn-primary btn-block">Edit Article</button>
+                    <a id="button-edit" data-id="' . $getArticleId . '" class="btn btn-primary btn-block" target="_blank">Edit Article</a>
                 </div>
             </div>';
             ?>
@@ -95,8 +94,9 @@
                 $('#button-edit').on('click', function(e) {
                     // alert($(this).data('id'));
                     var articleId = $(this).data('id');
-                    e.preventDefault();
-                    window.location.href = "edit_article.php?newsid=" + articleId;
+                    // e.preventDefault();
+                    var articleLink = "edit_article.php?newsid=" + articleId;
+                    window.open(articleLink, 'Edit Article');
                 });
             </script>
         </div>

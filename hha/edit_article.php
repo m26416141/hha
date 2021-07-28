@@ -139,6 +139,14 @@ if (isset($_POST["submit"])) {
             echo "There was an error uploading your file";
         }
     } else {
-        echo "File type not supported";
+        // echo "File type not supported";
+        $sql = "UPDATE article set article_title = '$arTitle' WHERE article_id = '$getArticleId'";
+        if ($con->query($sql) === true) {
+            // header("Location: edit_article.php?editarticlesuccess");
+            echo "edit success";
+        } else {
+            // header("Location: edit_article.php?editarticlefailed");
+            echo "edit failed";
+        }
     }
 }
