@@ -91,7 +91,8 @@
             if ($check_article) {
                 while ($row = mysqli_fetch_array($query_run)) {
                     $title = $row['article_title'];
-                    $date = $row['article_date'];
+                    $getDate = date_create($row['article_date']);
+                    $date = date_format($getDate, "d / m / Y");
                     $content = $row['article_content'];
                     $img = $row['article_img'];
                     // echo '

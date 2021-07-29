@@ -44,7 +44,7 @@ while ($row = mysqli_fetch_array($query_run)) {
                             <button id="btn-add-article" type="submit" name="submit" class="btn btn-primary">Save</button>
                         </div>
                         <div style="float: right; padding-right: 20px">
-                            <button id="btn-add-article" type="submit" name="submit" class="btn btn-danger">Delete</button>
+                            <button id="btn-add-article" class="btn btn-danger" type="delete" name="delete">Delete</button>
                         </div>
                     </div>
                     <div class="col-sm-12 logo-border" style="padding: 0px;"></div>
@@ -88,11 +88,51 @@ while ($row = mysqli_fetch_array($query_run)) {
                 </div>
             </form>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="modal-delete-article" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content modal-details-content" style="border-radius: 0px; border: none;">
+                    <div class="modal-header" style="border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom: 2px solid #f4f4f4;">
+                        <div class="row">
+                            <div class="col-sm-12" style="margin-bottom: 20px;">
+                                <h5 class="modal-title" id="subject" style="font-weight: 700;">Delete article</h5>
+                            </div>
+                            <!-- <div class="col-sm-6" style="float: right;">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="text-shadow: none; background-color: transparent; float: right;">
+                                    <i class="bx bxs-x-circle"></i>
+                                </button>
+                            </div> -->
+                            
+                        </div>
+                    </div>
+                    <div class="modal-body" style="padding-top: 20px">
+                        <p>Are you sure you want to delete this article?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">cancel</button>
+                        <button type="delete" name="delete" class="btn btn-danger btn-block" style="margin: 0px; margin-left: 10px">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
     
     </html>
     
     ';
+}
+if (isset($_POST["delete"])) {
+    $sql = "DELETE FROM article WHERE article_id = '$getArticleId'";
+    if ($con->query($sql) === true) {
+        echo '
+            <script>
+                alert("Delete success");
+                location.replace(admin.php);
+            </script>
+        ';
+    } else {
+        echo 'delete failed';
+    }
 }
 if (isset($_POST["submit"])) {
     // require_once 'dbh.inc.php';

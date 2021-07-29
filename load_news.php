@@ -13,7 +13,8 @@ if ($check_article) {
         $articleID = $row['article_id'];
         // echo $articleID;
         echo '
-        <div id="news-card-item" class="col">
+        <div class="col-xs-1 col-md-4 col-lg-3" style="padding: 0px;">
+        <div id="news-card-item">
             <div class="card">
                 <div class="card-body">
                     <div class="card-media">
@@ -27,6 +28,7 @@ if ($check_article) {
                     <a id="button-news" class="about-us-link" style="text-decoration: none;" href="" data-id="' . $articleID . '" data-title="' . $title . '">Details &rarr;</a>
                 </div>
             </div>
+        </div>
         </div>
         ';
     }

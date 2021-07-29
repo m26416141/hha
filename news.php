@@ -43,7 +43,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="news.php">Article</a>
-                        <a class="dropdown-item" href="#">Agenda</a>
+                        <a class="dropdown-item" href="agenda.php">Agenda</a>
                         <!-- <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a> -->
                     </div>
@@ -64,7 +64,7 @@
                 <h4>Latest Updates</h4>
             </div>
         </div> -->
-        <div id="news-row" class="row row-cols-3">
+        <div id="news-row" class="row">
             <script>
                 $("#news-row").load("load_news.php");
                 // setInterval(function() {
@@ -80,6 +80,108 @@
                     window.location.href = "news-details.php?newsid=" + articleId;
                 });
             </script>
+        </div>
+        <div class="row row-how"">
+            <div class=" col-sm" style="background-image: linear-gradient(130deg, #380139 70%, #b17abd); text-align: center; padding: 70px 40px 70px 40px;">
+            <p style="color: white; font-family: 'Noto Sans'; font-size: 40px; font-weight: 700; margin-bottom: 20px;">How can we help you?</p>
+            <div class="row justify-content-sm-center row-get-in-touch">
+                <div class="col-sm" style="color: white; font-size: 20px;">
+                    <p style="color: white; font-weight: 200"> <a class="border-link" href="contactus.php">Get in touch</a> with us or <a class="border-link location" href="location.php">find our office</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row end-page-info">
+        <div class="col-sm-6 hh-img" style=" display: flex; align-items: center; padding: 0px;">
+            <img src="assets/img/1x/logo-crop.png" height="70" alt="Howard Hermes Logo" style="margin-top: 20px;">
+        </div>
+        <div class="col-sm-6 bottom-link-full">
+            <div class="bottom-link">
+                <div class="col-link">
+                    <a href="contactus.php" style="color: black;">Contact</a>
+                </div>
+                <div class="col-link">
+                    <a href="location.php" style="color: black;">Location</a>
+                </div>
+            </div>
+            <div class="bottom-social" style="margin-top: 40px;">
+                <div class="col-social-media">
+                    <a href="#">
+                        <img src="assets/img/facebook.png" alt="" style="
+                                height: 20px;
+                                filter: invert(100%);
+                                display: block;
+                                margin-left: auto;
+                                margin-right: auto;">
+                    </a>
+                </div>
+                <div class="col-social-media">
+                    <a href="https://instagram.com/howardhermes?utm_medium=copy_link">
+                        <img src="assets/img/instagram.png" alt="" style="
+                                height: 20px; 
+                                filter: invert(100%); 
+                                display: block;
+                                margin-left: auto;
+                                margin-right: auto;">
+                    </a>
+                </div>
+                <div class="col-social-media">
+                    <a href="https://www.linkedin.com/company/howardhermesconsulting">
+                        <img src="assets/img/linkedin.png" alt="" style="
+                                height: 20px; 
+                                filter: invert(100%); 
+                                display: block;
+                                margin-left: auto;
+                                margin-right: auto;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row bottom-copyright">
+        <div class="col-sm" style="padding: 0px;">
+            <hr style="background-color: black;">
+            <p class="copyright-text" style="margin-bottom: 40px;">&#169; 2021 Howard Hermes Consulting</p>
+        </div>
+    </div>
+    <div class="fab-add" id="fab">
+        <i class='bx bx-message-add' style="font-size: 40px; display: block; margin-left: auto; margin-right: auto; color: #793775; cursor: pointer;"></i>
+        <!-- <a href="#" onclick="toogleAddCareers()">hai</a> -->
+        <script>
+            document.getElementById("fab").addEventListener("click", function() {
+                console.log("button clicked");
+                var rotated = false;
+                var action = document.querySelector('.row-form-add');
+                action.classList.toggle('fab-active');
+                var action_fab = document.querySelector('.fab-add');
+                action_fab.classList.toggle('fab2-active');
+            });
+        </script>
+    </div>
+    <div class="row-form-add row">
+        <div class="col-sm-12">
+            <div class="form-add-careers">
+                <h4 style="font-family: 'Noto Sans'; font-weight: 700; margin-bottom: 30px">Messages</h4>
+                <form method="POST">
+                    <label for="inputName">Name</label>
+                    <input class="form-input" type="text" name="name" id="inputName" placeholder="Your name">
+                    <label for="inputEmail">Email</label>
+                    <input class="form-input" type="text" name="email" id="inputEmail" placeholder="Your email">
+                    <label for="inputSubject">Subject</label>
+                    <input class="form-input" type="text" name="subject" id="inputSubject" placeholder="Your subject">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="inputMessages">Messages</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <label style="float: right;"><span id="wcDisplay" style="font-weight: 100;">0</span> / 200</label>
+                        </div>
+                    </div>
+                    <textarea id="inputMessages" class="form-text-area" rows="10" maxlength="200" type="text" name="messages" id="inputMessages" placeholder="Your messages" oninput="countWord()"></textarea>
+                    <!-- <input type="submit" name="submit"> -->
+                    <button type="submit" name="submit" class="btn-block button-submit">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
     <script>
