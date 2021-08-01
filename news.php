@@ -58,7 +58,7 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <h4 id="news-info-title" style="align-items: center; text-align: center">Latest Updates</h4>
+        <h4 id="news-info-title" style="align-items: center; text-align: center"><span>Latest Updates</span></h4>
         <!-- <div class="row">
             <div id="news-info-title" class="col-sm-12" st>
                 <h4>Latest Updates</h4>
@@ -211,3 +211,24 @@
 </body>
 
 </html>
+<?php
+//create connection
+// $con = mysqli_connect("localhost", "hhconsul_hhconsul", "K3G4yq1j7p", "hhconsul_test");
+require_once 'hha/dbh.inc.php';
+
+if (isset($_POST["submit"])) {
+    $contactName = $_POST["name"];
+    $contactEmail = $_POST["email"];
+    $contactSubject = $_POST["subject"];
+    $contactMssg = $_POST["messages"];
+    $contactDate = date("Y-m-d");
+
+    $sql = "INSERT into contact (name, email, subject, messages, mssg_date)
+	VALUES ('$contactName', '$contactEmail', '$contactSubject', '$contactMssg', '$contactDate')";
+
+    try {
+        mysqli_query($con, $sql);
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}

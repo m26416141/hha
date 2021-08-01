@@ -86,11 +86,14 @@ while ($row = mysqli_fetch_array($query_run)) {
                                     ["font", ["strikethrough", "superscript", "subscript"]],
                                     ["fontsize", ["fontsize"]],
                                     ["color", ["color"]],
-                                    ["para", ["ul", "ol", "paragraph"]]
+                                    ["para", ["ul", "ol", "paragraph"]],
+                                    ["height", ["height"]]
                                 ],
                                 tabsize: 2,
                                 height: 400
                             });
+                        $("#inputDesc").summernote("fontSize", 18);
+                        // $("#summernote").summernote("lineHeight", 20);
                         </script>
                         <script>
                             const cwords = document.getElementById("inputDesc");
@@ -170,7 +173,7 @@ if (isset($_POST["submit"])) {
     $allowedFile = array('jpg', 'jpeg', 'png');
 
     $allowedTags = '<p><strong><em><u><h1><h2><h3><h4><h5><h6><img>';
-    $allowedTags .= '<li><ol><ul><span><div><br><ins><del><b>';
+    $allowedTags .= '<li><ol><ul><span><div><br><ins><del><b><a><font>';
 
     //other input
     $arTitle = $_POST["title"];

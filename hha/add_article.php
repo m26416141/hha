@@ -71,7 +71,7 @@ if (!isset($_SESSION['uid'])) {
                             <label style="float: right;"><span id="wcDisplay" style="font-weight: 100;">0</span></label>
                         </div>
                     </div>
-                    <textarea id="inputDesc" class="form-text-area" rows="20" type="text" name="desc" placeholder="Article description" oninput="countWord()"></textarea>
+                    <textarea style="font-size: 18px;" id="inputDesc" class="form-text-area" rows="20" type="text" name="desc" placeholder="Article description" oninput="countWord()"></textarea>
                     <script>
                         $('#inputDesc').summernote({
                             toolbar: [
@@ -80,11 +80,13 @@ if (!isset($_SESSION['uid'])) {
                                 ["font", ["strikethrough", "superscript", "subscript"]],
                                 ["fontsize", ["fontsize"]],
                                 ["color", ["color"]],
-                                ["para", ["ul", "ol", "paragraph"]]
+                                ["para", ["ul", "ol", "paragraph"]],
+                                ["height", ["height"]]
                             ],
                             tabsize: 2,
                             height: 400
                         });
+                        $('#inputDesc').summernote('fontSize', 18);
                     </script>
                     <script>
                         const cwords = document.getElementById("inputDesc");

@@ -21,10 +21,10 @@ if ($check_article) {
                             <img src="../assets/uploads/' . $row['article_img'] . '" alt="" style="height: 200px; width: 100%; object-fit: cover">
                         </a>
                     </div>
-                    <h4 id="news-card-title" class="card-title news-card-title" style=" font-weight: 400">' . $title . '</h4>
-                    <div id="news-card-content" style="font-weight: 300;">' . $desc . '</div>
+                    <h4 id="news-card-title" class="card-title news-card-title" data-id=' . $articleID . '><a style="text-decoration: none" href="load_news_details.php?newsid=' . $articleID . '">' . $title . '</a></h4>
+                    <div id="news-card-content">' . $desc . '</div>
                     <!-- <button class="btn btn-secondary btn-block" type="button" id="button-news" data-id=' . $articleID . ' data-title=' . $title . '>Details</button> -->
-                    <a id="button-news" class="about-us-link" style="text-decoration: none;" href="" data-id="' . $articleID . '" data-title="' . $title . '">Details &rarr;</a>
+                    <a id="button-news" class="about-us-link" style="text-decoration: none;" href="load_news_details.php?newsid=' . $articleID . '" data-id="' . $articleID . '" data-title="' . $title . '">Details &rarr;</a>
                 </div>
             </div>
         </div>

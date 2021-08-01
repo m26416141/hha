@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
     $allowedFile = array('jpg', 'jpeg', 'png');
 
     $allowedTags = '<p><strong><em><u><h1><h2><h3><h4><h5><h6><img>';
-    $allowedTags .= '<li><ol><ul><span><div><br><ins><del><b>';
+    $allowedTags .= '<li><ol><ul><span><div><br><ins><del><b><a><font>';
 
     //other input
     $arTitle = $_POST["title"];
