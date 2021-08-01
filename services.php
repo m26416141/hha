@@ -189,13 +189,14 @@
                             </a>
                         </div>
                         <h4 class="card-title services-card-title" style=" font-weight: 700">CPOR</h4>
-                        <p style="font-weight: 300;">Crisis Preparation and Organizational Resilience.</p>
-                        <a class="about-us-link" style="text-decoration: none;" href="" data-target=" #modalCpor" data-toggle="modal">Details &rarr;</a>
+                        <p style="font-weight: 300;">Certified Professional Organization Recovery.</p>
+                        <!-- <a class="about-us-link" style="text-decoration: none;" href="" data-target=" #modalCpor" data-toggle="modal">Details &rarr;</a> -->
+                        <a class="about-us-link" style="text-decoration: none;" href="services-pc-content.php">Details &rarr;</a>
                     </div>
                 </div>
             </div>
             <!-- Modal CODS -->
-            <div class="modal fade" id="modalCpor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class=" modal fade" id="modalCpor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content modal-details-content" style="border-radius: 0px; border: none;">
                         <div class="modal-header" style="border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom: 2px solid #f4f4f4;">
@@ -204,7 +205,7 @@
                                     <h5 class="modal-title" id="subject" style="font-weight: 700;">CPOR</h5>
                                 </div>
                                 <div class="col-sm-12">
-                                    <p style="margin-bottom: 0px; font-weight: 700; font-size: 13px">Crisis Preparation and Organizational Resilience.</p>
+                                    <p style="margin-bottom: 0px; font-weight: 700; font-size: 13px">Certified Professional Organization Recovery.</p>
                                 </div>
                             </div>
                         </div>

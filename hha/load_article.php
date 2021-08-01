@@ -22,7 +22,7 @@ if ($check_article) {
                         </a>
                     </div>
                     <h4 id="news-card-title" class="card-title news-card-title" style=" font-weight: 400">' . $title . '</h4>
-                    <p id="news-card-content" style="font-weight: 300;">' . $desc . '</p>
+                    <div id="news-card-content" style="font-weight: 300;">' . $desc . '</div>
                     <!-- <button class="btn btn-secondary btn-block" type="button" id="button-news" data-id=' . $articleID . ' data-title=' . $title . '>Details</button> -->
                     <a id="button-news" class="about-us-link" style="text-decoration: none;" href="" data-id="' . $articleID . '" data-title="' . $title . '">Details &rarr;</a>
                 </div>

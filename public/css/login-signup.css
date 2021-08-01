@@ -93,9 +93,16 @@ textarea {
 }
 
 #btn-add-article {
-  margin-top: 30px;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+#editS {
+  display: inline-block;
+  color: white;
+  background-color: teal;
+  padding: 5px 20px;
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=login-signup.css.map */

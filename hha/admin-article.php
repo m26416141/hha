@@ -30,7 +30,8 @@
                 var articleId = $(this).data('id');
                 var articleTitle = $(this).data('title');
                 e.preventDefault();
-                window.location.href = "load_news_details.php?newsid=" + articleId;
+                // window.location.href = "load_news_details.php?newsid=" + articleId;
+                window.open("load_news_details.php?newsid=" + articleId, 'news details')
             });
         </script>
     </div>

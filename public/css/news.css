@@ -163,6 +163,8 @@ body {
   overflow: hidden !important;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
+  font-weight: 400;
+  margin-bottom: 40px;
 }
 
 #news-info-title {
@@ -173,6 +175,11 @@ body {
   font-size: 20px;
   font-family: "Noto Sans";
   font-weight: 700;
+}
+
+.news-card-title:hover {
+  color: #793775;
+  cursor: pointer;
 }
 
 #edit-delete-article-col {
@@ -226,7 +233,7 @@ body {
 
   .card:hover {
     background-color: white;
-    box-shadow: 0px 0px 10px 5px #7070704d;
+    color: black !important;
   }
 
   .card-body {
@@ -239,6 +246,8 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: #793775;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
   transition: 0.3s;
 }
 
@@ -247,6 +256,8 @@ body {
   font-family: "Noto Sans";
   text-decoration: none;
   color: #793775;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #793775;
 }
 
 .fab-add {

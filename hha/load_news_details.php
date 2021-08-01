@@ -97,7 +97,7 @@
                     var articleId = $(this).data('id');
                     // e.preventDefault();
                     var articleLink = "edit_article.php?newsid=" + articleId;
-                    window.open(articleLink, 'Edit Article');
+                    window.location.href = articleLink;
                 });
             </script>
         </div>

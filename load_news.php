@@ -8,12 +8,13 @@ $check_article = mysqli_num_rows($query_run) > 0;
 if ($check_article) {
     while ($row = mysqli_fetch_array($query_run)) {
         $title = $row['article_title'];
-        $date = $row['article_date'];
+        $getDate = date_create($row['article_date']);
+        $date = date_format($getDate, "d / m / Y");
         $desc = $row['article_content'];
         $articleID = $row['article_id'];
         // echo $articleID;
         echo '
-        <div class="col-xs-1 col-md-4 col-lg-3" style="padding: 0px;">
+        <div class="col-xs-1 col-md-3 col-lg-3" style="padding: 0px;">
         <div id="news-card-item">
             <div class="card">
                 <div class="card-body">
@@ -22,8 +23,9 @@ if ($check_article) {
                             <img src="assets/uploads/' . $row['article_img'] . '" alt="" style="height: 200px; width: 100%; object-fit: cover;">
                         </a>
                     </div>
-                    <h4 id="news-card-title" class="card-title news-card-title" style=" font-weight: 400">' . $title . '</h4>
-                    <p id="news-card-content" style="font-weight: 300;">' . $desc . '</p>
+                    <h4 id="news-card-title" class="card-title news-card-title" data-id=' . $articleID . '>' . $title . '</h4>
+                    <p>' . $date . '</p>
+                    <div id="news-card-content">' . $desc . '</div>
                     <!-- <button class="btn btn-secondary btn-block" type="button" id="button-news" data-id=' . $articleID . ' data-title=' . $title . '>Details</button> -->
                     <a id="button-news" class="about-us-link" style="text-decoration: none;" href="" data-id="' . $articleID . '" data-title="' . $title . '">Details &rarr;</a>
                 </div>
