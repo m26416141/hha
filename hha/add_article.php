@@ -38,17 +38,40 @@ if (!isset($_SESSION['uid'])) {
     </script> -->
     <div class="container-fluid">
         <form action="upload.inc.php" method="POST" enctype="multipart/form-data">
-            <div class="row">
-                <div class="col-sm" style="padding: 0px;">
-                    <h4 style="font-family: 'Noto Sans'; font-weight: 700; margin: 30px">Add Article</h4>
+            <div class="row header">
+                <div class="col-sm d-flex align-items-center" style="padding: 0px;">
+                    <h4 style="font-family: 'Noto Sans'; font-weight: 700; margin: 30px;">Add Article</h4>
+                    <?php
+                    if (isset($_GET['success'])) {
+                        if ($_GET['success'] == 'uploadarticle') {
+                            echo '<span id="addS">Add article success</span>';
+                        }
+                    } else if (isset($_GET['failed'])) {
+                        if ($_GET['failed'] == 'uploadarticle') {
+                            echo '<span id="addF">Add article failed</span>';
+                        }
+                        if ($_GET['failed'] == 'uploadimage') {
+                            echo '<span id="addF">Upload image failed</span>';
+                        }
+                        if ($_GET['failed'] == 'imagetoobig') {
+                            echo '<span id="addF">Image size more than 500 KB</span>';
+                        }
+                        if ($_GET['failed'] == 'erroruploadimage') {
+                            echo '<span id="addF">Error uploading your image</span>';
+                        }
+                        if ($_GET['failed'] == 'filenotsupported') {
+                            echo '<span id="addF">File type not supported</span>';
+                        }
+                    }
+                    ?>
                 </div>
                 <div class="col-sm d-flex align-items-center justify-content-end" style="padding: 0px;">
                     <div style="float: right; padding-right: 30px">
                         <button id="btn-add-article" type="submit" name="submit" class="btn btn-primary">Save</button>
                     </div>
                 </div>
-                <div class="col-sm-12 logo-border" style="padding: 0px;"></div>
             </div>
+            <!-- <div class="col-sm-12 logo-border" style="padding: 0px;"></div> -->
             <div class="row">
                 <div class="col-sm-4">
                     <div class="col-sm-12">
@@ -57,12 +80,12 @@ if (!isset($_SESSION['uid'])) {
                             <input class="form-input" type="text" name="title" id="inputTitle" placeholder="Article title">
                             <label for="inputDate">Date published</label>
                             <input class="form-input" type="date" name="date" id="inputDate" style="padding-bottom: 20px;">
-                            <label for="inputImage">Upload image</label>
+                            <label for="inputImage">Upload image (Max: 500 KB)</label>
                             <input class="form-input" type="file" name="file" id="inputImage" placeholder="Select image">
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-8" style="padding: 0px 30px;">
+                <div class="col-sm-8" style="padding: 0px 30px 0px 10px;">
                     <div class="row">
                         <div class="col-sm-6">
                             <label for="inputDesc">Description</label>
@@ -84,7 +107,15 @@ if (!isset($_SESSION['uid'])) {
                                 ["height", ["height"]]
                             ],
                             tabsize: 2,
-                            height: 400
+                            height: 400,
+                            callbacks: {
+                                onPaste: function(e) {
+                                    console.log("Called event paste");
+                                    var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData("Text");
+                                    e.preventDefault();
+                                    document.execCommand("insertText", false, bufferText);
+                                }
+                            }
                         });
                         $('#inputDesc').summernote('fontSize', 18);
                     </script>

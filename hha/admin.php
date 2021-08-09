@@ -40,7 +40,7 @@ if (!isset($_SESSION['uid'])) {
                         <i class='bx bx-menu'></i>
                     </div>
                 </div>
-                <div class="logo-border" style="margin-top: 20px;"></div>
+                <div style="margin-top: 20px; border-top: 1px solid #d4d4d4;"></div>
                 <ul class="list-group">
                     <li class="list-group-item" id="messages" style="background-image: linear-gradient(145deg, #380139 90%, #b17abd);">
                         <a id="text-messages" href="#" data-target="admin-messages" onclick="loadMessages()" style="color: white;">
@@ -63,10 +63,18 @@ if (!isset($_SESSION['uid'])) {
                             <span class="links-name">Article</span>
                         </a>
                     </li>
+                    <li class="list-group-item" id="services">
+                        <a id="text-services" href="#" data-target="pc_services" onclick="loadServices()">
+                            <!-- <box-icon type='solid' name='group'></box-icon> -->
+                            <i class='bx bxs-news'></i>
+                            <span class="links-name">Services</span>
+                        </a>
+                    </li>
+                    <div style="margin-top: 20px; border-top: 1px solid #d4d4d4;"></div>
                     <?php
                     if (isset($_SESSION["uid"])) {
                         echo '
-                        <li class="list-group-item">
+                        <li class="list-group-item" style="background-color: #dc3545; color: white;">
                             <a id="logout" href="admin-logout.php">
                                 <i class="bx bx-exit"></i>
                                 <span class="links-name">Log Out</span>
@@ -129,6 +137,8 @@ if (!isset($_SESSION['uid'])) {
         function loadMessages() {
             document.getElementById("messages").style.backgroundImage = "linear-gradient(145deg, #380139 90%, #b17abd)";
             document.getElementById("text-messages").style.color = "white";
+            document.getElementById("services").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
+            document.getElementById("text-services").style.color = "black";
             document.getElementById("careers").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
             document.getElementById("text-careers").style.color = "black";
             document.getElementById("article").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
@@ -138,6 +148,8 @@ if (!isset($_SESSION['uid'])) {
         function loadCareers() {
             document.getElementById("careers").style.backgroundImage = "linear-gradient(145deg, #380139 90%, #b17abd)";
             document.getElementById("text-careers").style.color = "white";
+            document.getElementById("services").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
+            document.getElementById("text-services").style.color = "black";
             document.getElementById("messages").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
             document.getElementById("text-messages").style.color = "black";
             document.getElementById("article").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
@@ -147,6 +159,19 @@ if (!isset($_SESSION['uid'])) {
         function loadArticle() {
             document.getElementById("article").style.backgroundImage = "linear-gradient(145deg, #380139 90%, #b17abd)";
             document.getElementById("text-article").style.color = "white";
+            document.getElementById("services").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
+            document.getElementById("text-services").style.color = "black";
+            document.getElementById("messages").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
+            document.getElementById("text-messages").style.color = "black";
+            document.getElementById("careers").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
+            document.getElementById("text-careers").style.color = "black";
+        }
+
+        function loadServices() {
+            document.getElementById("services").style.backgroundImage = "linear-gradient(145deg, #380139 90%, #b17abd)";
+            document.getElementById("text-services").style.color = "white";
+            document.getElementById("article").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
+            document.getElementById("text-article").style.color = "black";
             document.getElementById("messages").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";
             document.getElementById("text-messages").style.color = "black";
             document.getElementById("careers").style.backgroundImage = "linear-gradient(145deg, #f2f2f2 90%, #f2f2f2)";

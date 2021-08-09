@@ -39,7 +39,7 @@ while ($row = mysqli_fetch_array($query_run)) {
     <body>
         <div class="container-fluid">
             <form method="POST" enctype="multipart/form-data">
-                <div class="row">
+                <div class="row header">
                     <div class="col-sm d-flex align-items-center" style="padding: 0px; display: flex">
                         <h4 style="font-weight: 700; margin: 30px">Edit Article</h4>
                         <span id="editS"></span>
@@ -52,7 +52,7 @@ while ($row = mysqli_fetch_array($query_run)) {
                             <button id="btn-add-article" type="submit" name="submit" class="btn btn-primary">Save</button>
                         </div>
                     </div>
-                    <div class="col-sm-12 logo-border" style="padding: 0px;"></div>
+                    <!-- <div class="col-sm-12 logo-border" style="padding: 0px;"></div> -->
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
@@ -68,7 +68,7 @@ while ($row = mysqli_fetch_array($query_run)) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-8" style="padding: 0px 30px;">
+                    <div class="col-sm-8" style="padding: 0px 30px 0px 10px;">
                         <div class="row">
                             <div class="col-sm-6">
                                 <label for="inputDesc">Description</label>
@@ -87,13 +87,22 @@ while ($row = mysqli_fetch_array($query_run)) {
                                     ["fontsize", ["fontsize"]],
                                     ["color", ["color"]],
                                     ["para", ["ul", "ol", "paragraph"]],
-                                    ["height", ["height"]]
+                                    ["height", ["height"]],
+                                    ["fontname", ["Arial"]]
                                 ],
                                 tabsize: 2,
-                                height: 400
+                                height: 400,
+                                callbacks: {
+                                    onPaste: function(e) {
+                                        console.log("Called event paste");
+                                        var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData("Text");
+                                        e.preventDefault();
+                                        document.execCommand("insertText", false, bufferText);
+                                    }
+                                }
                             });
-                        $("#inputDesc").summernote("fontSize", 18);
-                        // $("#summernote").summernote("lineHeight", 20);
+                            // $("#summernote").summernote("lineHeight", 20);
+                            // $("#inputDesc").summernote("fontName", "Arial");
                         </script>
                         <script>
                             const cwords = document.getElementById("inputDesc");
@@ -173,7 +182,7 @@ if (isset($_POST["submit"])) {
     $allowedFile = array('jpg', 'jpeg', 'png');
 
     $allowedTags = '<p><strong><em><u><h1><h2><h3><h4><h5><h6><img>';
-    $allowedTags .= '<li><ol><ul><span><div><br><ins><del><b><a><font>';
+    $allowedTags .= '<li><ol><ul><span><div><br><ins><del><b><a><font><i>';
 
     //other input
     $arTitle = $_POST["title"];

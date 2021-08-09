@@ -57,76 +57,76 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="row row-service-content">
-            <div class="col" style="align-items: center; padding: 0px">
-                <div id="news-title" class="col-sm-12">
-                    <h2 style="font-weight: 700;">Certified Professional Organization Recovery</h2>
-                    <div class="col-sm-12 logo-border" style="padding: 0px; margin: 40px 0px 20px 0px"></div>
-                </div>
-                <div id="services-media" class="col-sm-12">
-                    <iframe src="https://www.youtube.com/embed/OhQjfrvXEMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px;"></iframe>
-                </div>
-                <div id="news-img" class="col-sm-12">
-                    <img src="" alt="" style="width: 100%; display: block; margin-left: auto; margin-right: auto;">
-                </div>
-                <div id="news-desc" class="col-sm-12">
-                    <h4 style="font-weight: 700;">Overview</h4>
-                    <p style="letter-spacing: 0.01rem;">CPOR is a certification program aimed at leaders to becoma gents of change in organizations that are experiencing a declining phase towards revival by providing a practical system that has been standardized by International Organization Develompent Association, and BNSP Indonesia (on progress)</p>
-                    <h4 style="font-weight: 700;">Benefit</h4>
-                    <ul style="letter-spacing: 0.01rem;">
-                        <li>Gain the ability to generate more revenue</li>
-                        <li>Provide standardized practical system with steps.</li>
-                        <li>Understand the mind map that is beneficial for organizational development</li>
-                        <li>CPOR as business strategic partner to support leaders making quick decisions in critical situations</li>
-                    </ul>
-                    <h4 style="font-weight: 700;">Participant Requirement</h4>
-                    <ul style="letter-spacing: 0.01rem;">
-                        <li>Lead a business with minimum 5 years experience as business owner or leader in an organization/BOD/TOP management.</li>
-                        <li>Leaders in private bussiness, goverment and educational institutions</li>
-                        <li>Experience with changes in the organization</li>
-                    </ul>
-                    <div id="services-date" class="col-sm-12" style="padding: 0px;">
-                        <h4 style="font-weight: 700;">Event date:</h4>
-                        <p style="letter-spacing: 0.01rem;">27-28 August 2021, 9.00 AM - 5.00 PM</p>
-                        <p style="font-weight: 700; letter-spacing: 0.01rem;">LIVE via ZOOM</p>
+        <?php
+        require_once 'hha/dbh.inc.php';
+        $getservicesID = $_GET['servicesid'];
+        $query = "SELECT * FROM services where services_id = $getservicesID";
+        $query_run = mysqli_query($con, $query);
+        $check_services = mysqli_num_rows($query_run) > 0;
+        if ($check_services) {
+            while ($row = mysqli_fetch_array($query_run)) {
+                $title = $row['services_title'];
+                $content = $row['services_content'];
+                $img = $row['services_img'];
+                $imgstatus = $row['services_img_status'];
+                $services = $row['services_name'];
+
+                if ($title == null || $content == null || $img == null) {
+                    echo '
+                    <div class="row" id="row-no-jobs" style="padding: 0px; margin: 80px 40px 110px;">
+                        <div class="col-sm-12" style="padding: 0px; text-align: center">
+                            <h4 style="font-weight: 700; margin-bottom: 40px;">Sorry there is no event available this time</h4>
+                            <p style="margin-bottom: 40px;">Thank you for your interest about our services at Howard Hermes Consulting.<br>Currently we do not have any ' . $services . ' event available.</p>
+                        </div>
                     </div>
-                    <div id="service-invesment">
-                        <h4 style="font-weight: 700;">Invesment</h4>
-                        <p>IDR 6.000.000</p>
-                    </div>
-                    <div class="col-sm-12" style="padding: 0px;">
-                        <div id="fasilitator" class="d-flex align-item-center">
-                            <img src="assets/img/IMG_2333.png" alt="fasilitatorBuDiah">
-                            <div id="fasilitator-desc">
-                                <h4 style="font-weight: 700;">Fasilitator</h4>
-                                <p class="name" style="font-weight: 700; color: #793775">Diah D, PhD.OD</p>
-                                <br>
-                                <p style="font-weight: 700;">CPM, CPHR, CPBC, CSRS, CBV, CAPM, CBC</p>
-                                <ul>
-                                    <li>OD and Change Expert</li>
-                                    <li>CEO Howard Hermes Consulting</li>
-                                </ul>
+                ';
+                } else {
+                    echo '
+                    <div class="row d-flex justify-content-center row-service-content">
+                        <div class="col-sm-8" style="align-items: center; padding: 0px">
+                            <div id="news-title" class="col-sm-12">
+                                <h2 style="font-weight: 700; font-size: 50px">' . $title . '</h2>
+                                <div class="col-sm-12 logo-border" style="padding: 0px; margin: 40px 0px 20px 0px"></div>
+                            </div>';
+                    if ($imgstatus == 1) {
+                        echo '
+                                <div id="news-img" class="col-sm-12">
+                                    <img src="assets/uploads/' . $img . '" alt="" style="width: 100%; display: block; margin-left: auto; margin-right: auto;">
+                                </div>';
+                    } else if ($imgstatus == 2) {
+                        echo '
+                                <div id="services-media" class="col-sm-12">
+                                    <iframe src="' . $img . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px;"></iframe>
+                                </div>
+                                ';
+                    }
+                    echo '
+                            <div id="news-desc" class="col-sm-12" style="margin-top: 40px">
+                                ' . $content . '
+                                <div class="col-sm-12 logo-border" style="padding: 0px; margin: 40px 0px 20px 0px"></div>
+                            </div>
+                            <div class="row" style="padding: 70px 16px 100px">
+                                <div class="col-sm-12">
+                                    <div style="text-align: center; padding: 40px; margin-bottom: 20px">
+                                        <p style="color: black; font-family: "Noto Sans"; font-size: 40px; font-weight: 700; margin-bottom: 20px;"><b style="border-bottom: 2px solid #793775">Book Your Seat!</b></p>
+                                        <p style=" color: black; margin: 0px">Limited to 50 Participant</p>
+                                    </div>
+                                </div>
+                                <div id="div-form" class="col-sm-6">
+                                    <a id="btn-form" class="btn btn-block" href="https://bit.ly/RegCPORHowardHermes"><b>Book Now</b></a>
+                                </div>
+                                <div id="div-info" class="col-sm-6">
+                                    <a id="btn-info" class="btn btn-block" href="https://wa.me/6281230983619">Information</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 logo-border" style="padding: 0px; margin: 40px 0px 20px 0px"></div>
-                </div>
-                <div class="row" style="padding: 70px 16px 100px">
-                    <div class="col-sm-12">
-                        <div style="text-align: center; padding: 40px; margin-bottom: 20px">
-                            <p style="color: black; font-family: 'Noto Sans'; font-size: 40px; font-weight: 700; margin-bottom: 20px;"><b style="border-bottom: 2px solid #793775">Book Your Seat!</b></p>
-                            <p style=" color: black; margin: 0px">Limited to 50 Participant</p>
-                        </div>
-                    </div>
-                    <div id="div-form" class="col-sm-6">
-                        <a id="btn-form" class="btn btn-block" href="https://bit.ly/RegCPORHowardHermes"><b>Book Now</b></a>
-                    </div>
-                    <div id="div-info" class="col-sm-6">
-                        <a id="btn-info" class="btn btn-block" href="https://wa.me/6281230983619">Information</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    ';
+                }
+            }
+        } else {
+        }
+        ?>
         <div class="row row-how"">
             <div class=" col-sm" style="background-image: linear-gradient(130deg, #380139 70%, #b17abd); text-align: center; padding: 70px 40px 70px 40px;">
             <p style="color: white; font-family: 'Noto Sans'; font-size: 40px; font-weight: 700; margin-bottom: 20px;">How can we help you?</p>

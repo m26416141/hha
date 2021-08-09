@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
     $allowedFile = array('jpg', 'jpeg', 'png');
 
     $allowedTags = '<p><strong><em><u><h1><h2><h3><h4><h5><h6><img>';
-    $allowedTags .= '<li><ol><ul><span><div><br><ins><del><b><a><font>';
+    $allowedTags .= '<li><ol><ul><span><div><br><ins><del><b><a><font><i>';
 
     //other input
     $arTitle = $_POST["title"];
@@ -32,20 +32,23 @@ if (isset($_POST["submit"])) {
                 if (move_uploaded_file($fileTmp, '../assets/uploads/' . $fileNameNew) === true) {
                     $sql = "INSERT into article (article_title, article_date, article_content, article_img) VALUES ('$arTitle', '$arDate', '$arDesc', '$fileNameNew')";
                     if (mysqli_query($con, $sql) === true) {
-                        header("Location: add_article.php?uploadarticlesuccess");
+                        header("Location: add_article.php?success=uploadarticle");
                     } else {
-                        header("Location: add_article.php?uploadarticlefailed");
+                        header("Location: add_article.php?failed=uploadarticle");
                     }
                 } else {
-                    header("Location: add_article.php?uploadimagefailed");
+                    header("Location: add_article.php?failed=uploadimage");
                 }
             } else {
-                echo "File is too big";
+                // echo "File is too big";
+                header("Location: add_article.php?failed=imagetoobig");
             }
         } else {
-            echo "There was an error uploading your file";
+            // echo "There was an error uploading your file";
+            header("Location: add_article.php?failed=erroruploadimage");
         }
     } else {
-        echo "File type not supported";
+        // echo "File type not supported";
+        header("Location: add_article.php?failed=filenotsupported");
     }
 }

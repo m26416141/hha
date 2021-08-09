@@ -65,12 +65,109 @@
             </div>
         </div> -->
         <div id="news-row" class="row">
-            <script>
-                $("#news-row").load("load_news.php");
+            <!-- <script>
+                $("#news-row").load("load_news_pages.php");
                 // setInterval(function() {
                 //     $("#messages-data").load("load_messages.php");
                 // }, 1000);
-            </script>
+            </script> -->
+            <?php
+
+            require_once 'hha/dbh.inc.php';
+
+            $item_limit = 8;
+            $page = isset($_GET["page"]) ? (int)$_GET["page"] : 1;
+            $mulai = ($page > 1) ? ($page * $item_limit) - $item_limit : 0;
+
+            $query = "SELECT * FROM article";
+            $result = mysqli_query($con, $query);
+            $total = mysqli_num_rows($result);
+
+            $check_article = mysqli_num_rows($result) > 0;
+            if ($check_article) {
+                $pages = ceil($total / $item_limit);
+
+                $query_limit = mysqli_query($con, "SELECT * FROM article ORDER BY article_date DESC LIMIT $mulai, $item_limit");
+                $no = $mulai + 1;
+
+                while ($data = mysqli_fetch_assoc($query_limit)) {
+                    $title = $data['article_title'];
+
+                    $getDate = date_create($data['article_date']);
+                    $date = date_format($getDate, "m/d/Y");
+                    $dateToTime = strtotime($date);
+                    $diff = time() - $dateToTime;
+                    $day_diff = floor($diff / 86400);
+                    $dateDisplay;
+                    if ($day_diff == 0) {
+                        if ($diff < 60) $dateDisplay = 'Just now';
+                        else if ($diff < 120) $dateDisplay = '1 minute ago';
+                        else if ($diff < 3600) $dateDisplay = strval(floor($diff / 60)) . ' minutes ago';
+                        else if ($diff < 7200) $dateDisplay = '1 hour ago';
+                        else if ($diff < 86400) {
+                            $strDiff = strval(floor($diff / 3600));
+                            // $dateDisplay = $strDiff . ' hours ago';
+                            $dateDisplay = 'Today';
+                        }
+                    } else if ($day_diff < 2) {
+                        $dateDisplay = 'Yesterday';
+                    } else if ($day_diff < 7) $dateDisplay = $day_diff . ' days ago';
+                    else if ($day_diff < 31) $dateDisplay = ceil($day_diff / 7) . ' weeks ago';
+                    else if ($day_diff < 60) $dateDisplay = 'last month';
+                    else if ($day_diff > 60) $dateDisplay = date_format($getDate, "M d Y");
+
+                    $desc = $data['article_content'];
+                    $articleID = $data['article_id'];
+                    // echo $articleID;
+                    echo '
+                        <div class="col-xs-1 col-md-4 col-lg-3" style="padding: 0px;">
+                        <div id="news-card-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-media">
+                                        <a>
+                                            <img src="assets/uploads/' . $data['article_img'] . '" alt="" style="height: 200px; width: 100%; object-fit: cover;">
+                                        </a>
+                                    </div>
+                                    <p id="news-card-date">' . $dateDisplay . '</p>
+                                    <h4 id="news-card-title" class="card-title news-card-title" href="news-details.php?newsid=' . $articleID . '" data-id=' . $articleID . '>' . $title . '</h4>
+                                    <div id="news-card-content">' . $desc . '</div>
+                                    <!-- <button class="btn btn-secondary btn-block" type="button" id="button-news" data-id=' . $articleID . ' data-title=' . $title . '>Details</button> -->
+                                    <a id="button-news" class="about-us-link" style="text-decoration: none;" href="news-details.php?newsid=' . $articleID . '" data-id="' . $articleID . '" data-title="' . $title . '">Details &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    ';
+                }
+            } else {
+                echo '
+                <div class="row" id="row-no-jobs" style="padding: 0px; margin: 80px 40px 110px;">
+                    <div class="col-sm-12" style="padding: 0px;">
+                        <h4 style="font-weight: 700; margin-bottom: 40px;">Sorry there are no news available this time</h4>
+                        <p style="margin-bottom: 40px;">Thank you for your interest about employement opportunity at Howard Hermes Consulting.<br>Currently we do not have any open positions, however if you are interested in possible future opportunities<br>please send your CV to <b style="color: #793775;">center@hhconsulting.id</b></p>
+                    </div>
+                </div>
+                ';
+            }
+            ?>
+            <div id="row-pagination" class="col-sm-12 d-flex justify-content-center">
+                <p>Page: </p>
+                <?php
+                $getHalId = $_GET['page'];
+                for ($i = 1; $i <= $pages; $i++) {
+                    if ($i == $getHalId || $i == 1) {
+                        echo '
+                        <a id="active" href="?page=' . $i . '">' . $i . '</a>
+                        ';
+                    } else {
+                        echo '
+                        <a href="?page=' . $i . '">' . $i . '</a>
+                        ';
+                    }
+                }
+                ?>
+            </div>
             <script>
                 $('#news-row').on('click', '#news-card-title', function(e) {
                     // alert($(this).data('id'));

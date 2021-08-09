@@ -203,7 +203,7 @@ body {
 #news-info-title {
 	margin: 70px 40px 150px;
 	font-weight: 700;
-	font-size: 40px;
+	font-size: 30px;
 	span {
 		border-bottom: 4px solid #793775;
 		padding-bottom: 2px;
@@ -252,9 +252,7 @@ body {
 	.end-page-info {
 		padding: 50px 80px 70px;
 	}
-	.row-get-in-touch {
-		padding: 0px 200px;
-	}
+
 	.col-location-details {
 		color: white;
 		padding: 100px 0px 200px 0px;
@@ -498,8 +496,77 @@ body {
 	margin: 70px 130px 150px;
 }
 
+#row-pagination {
+	margin-top: 80px;
+	p {
+		color: black;
+		font-size: 20px;
+		// font-weight: 700;
+		margin-right: 10px;
+	}
+	a {
+		padding: 0px 5px;
+		text-decoration: none;
+		color: #a7a7a7;
+		font-size: 20px;
+		transition: 0.1s;
+		// border-bottom: 1px solid #793775;
+	}
+	a:hover {
+		color: black;
+	}
+	#active {
+		color: #793775;
+		font-weight: 700;
+		// border-bottom: 2px solid #793775;
+	}
+}
+
 #agenda-row {
 	margin: 70px 130px 0px;
+}
+
+//NEWS DETAILS CSS
+
+.logo-border {
+	// margin-top: 20px;
+	border-top: 1px solid #a7a7a7;
+}
+
+#news-title {
+	margin-bottom: 20px;
+	padding: 0px;
+	h4 {
+		font-size: 50px;
+		font-weight: 700;
+	}
+}
+
+#news-date {
+	margin-top: 20px;
+	p {
+		color: #793775;
+		font-weight: 700;
+	}
+}
+
+#news-contact {
+	margin-top: 20px;
+	// background-color: #b17abd;
+	padding: 0px;
+	padding-left: 20px;
+	p {
+		color: black;
+		font-weight: 700;
+	}
+}
+
+.row-get-in-touch {
+	padding: 0px 200px;
+}
+
+.details-row-get-in-touch {
+	padding: 0px 70px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -676,5 +743,8 @@ body {
 	.card-body {
 		padding-left: 5px;
 		padding-right: 5px;
+	}
+	.end-page-info {
+		padding: 40px 0px;
 	}
 }

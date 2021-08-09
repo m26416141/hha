@@ -105,4 +105,23 @@ textarea {
   visibility: hidden;
 }
 
+#addS {
+  display: inline-block;
+  color: white;
+  background-color: teal;
+  padding: 5px 20px;
+}
+
+#addF {
+  display: inline-block;
+  color: white;
+  background-color: #dc3545;
+  padding: 5px 20px;
+}
+
+.header {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.07);
+  margin-bottom: 50px;
+}
+
 /*# sourceMappingURL=login-signup.css.map */

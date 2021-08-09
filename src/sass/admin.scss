@@ -438,16 +438,24 @@ body {
 
 #news-card-item {
 	margin-bottom: 30px;
-	margin-left: 10px;
-	margin-right: 10px;
+	padding: 0px;
 	.card {
 		.card-body {
 			.card-media {
 				margin-bottom: 40px;
 			}
 			#news-card-title {
+				overflow: hidden;
+				line-height: 2rem;
+				max-height: 8rem;
+				-webkit-box-orient: vertical;
+				display: block;
+				display: -webkit-box;
+				overflow: hidden !important;
+				text-overflow: ellipsis;
+				-webkit-line-clamp: 4;
 				margin-bottom: 40px;
-				font-weight: 700;
+				font-size: 27px;
 			}
 			#news-card-content {
 				overflow: hidden;
@@ -505,5 +513,39 @@ body {
 	padding: 40px 40px;
 	.btn-danger {
 		margin-bottom: 20px;
+	}
+}
+
+#service-menu {
+	li {
+		display: inline;
+	}
+}
+
+//services css
+#news-title {
+	margin-bottom: 20px;
+	padding: 0px;
+	h4 {
+		font-size: 50px;
+		font-weight: 700;
+	}
+}
+
+#services-media {
+	// margin-bottom: 40px;
+	overflow: hidden;
+	padding-top: 56.25%; /* 16:9*/
+
+	position: relative;
+	iframe {
+		border: 0;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		// padding-left: 16px;
+		// padding-right: 16px;
 	}
 }

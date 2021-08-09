@@ -89,7 +89,7 @@
                         </div>
                         <h4 class="card-title services-card-title" style=" font-weight: 700">CPOD</h4>
                         <p style="font-weight: 300;">Certified Professional in Organizational Development.</p>
-                        <a class="about-us-link" style="text-decoration: none;" href="" data-target=" #modalCods" data-toggle="modal">Details &rarr;</a>
+                        <a class="about-us-link" style="text-decoration: none;" href="services-pc-content.php?servicesid=1">Details &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                         </div>
                         <h4 class="card-title services-card-title" style=" font-weight: 700">CPOA</h4>
                         <p style="font-weight: 300;">Certified Professional in Organizational Ambidexterity.</p>
-                        <a class="about-us-link" style="text-decoration: none;" href="" data-target=" #modalCpoa" data-toggle="modal">Details &rarr;</a>
+                        <a class="about-us-link" style="text-decoration: none;" href="services-pc-content.php?servicesid=2">Details &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -191,7 +191,7 @@
                         <h4 class="card-title services-card-title" style=" font-weight: 700">CPOR</h4>
                         <p style="font-weight: 300;">Certified Professional Organization Recovery.</p>
                         <!-- <a class="about-us-link" style="text-decoration: none;" href="" data-target=" #modalCpor" data-toggle="modal">Details &rarr;</a> -->
-                        <a class="about-us-link" style="text-decoration: none;" href="services-pc-content.php">Details &rarr;</a>
+                        <a class="about-us-link" style="text-decoration: none;" href="services-pc-content.php?servicesid=3">Details &rarr;</a>
                     </div>
                 </div>
             </div>

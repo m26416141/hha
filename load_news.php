@@ -29,7 +29,7 @@ if ($check_article) {
             $dateDisplay = 'Yesterday';
         } else if ($day_diff < 7) $dateDisplay = $day_diff . ' days ago';
         else if ($day_diff < 31) $dateDisplay = ceil($day_diff / 7) . ' weeks ago';
-        else if ($day_diff < 60) $dateDisplay = 'last month';
+        else if ($day_diff < 60) $dateDisplay = 'Last month';
 
         $desc = $row['article_content'];
         $articleID = $row['article_id'];
@@ -44,7 +44,7 @@ if ($check_article) {
                             <img src="assets/uploads/' . $row['article_img'] . '" alt="" style="height: 200px; width: 100%; object-fit: cover;">
                         </a>
                     </div>
-                    <p id="news-card-date">' . $dateDisplay . '</p>
+                    <p id="news-card-date">' . $day_diff . '</p>
                     <h4 id="news-card-title" class="card-title news-card-title" data-id=' . $articleID . '>' . $title . '</h4>
                     <div id="news-card-content">' . $desc . '</div>
                     <!-- <button class="btn btn-secondary btn-block" type="button" id="button-news" data-id=' . $articleID . ' data-title=' . $title . '>Details</button> -->
